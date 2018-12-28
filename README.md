@@ -12,6 +12,4 @@ src 根目录
 ├─wechat          微信相关目录
 │  ├──common 公共目录
 │  ├──controller 控制器目录
-├─application           应用目录
-│  ├─common             公共模块目录（可以更改）
 ~~~
