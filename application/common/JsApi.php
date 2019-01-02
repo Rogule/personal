@@ -1,5 +1,5 @@
 <?php
-namespace app\common;
+namespace common;
 /**
  * Created by PhpStorm.
  * User: Administrator
@@ -15,10 +15,12 @@ class JsApi{
     protected $notify_url='http://xxxxxxxxx/wechatpay/actionNotifyurl';// 本控制器下面的 notifyurl  方法的URL路径 记得格式 是 http://......    【这是回调】
     public function __construct()
     {
-        $this->APPID = 'xxxxxxxxxxxxxxxxx';
-        $this->MCH_ID = 'xxxxxxxxxxxxxxx';
-        $this->MakeSign = 'xxxxxxxxxxxxxxx';
-        $this->Secret = 'xxxxxxxxxxxxxxx';
+        $path = APP_PATH.'/config/WeChatConfig.php';
+        $config = include ($path);
+        $this->APPID = $config['wechatLogin']['appId'];
+        $this->MCH_ID = $config['JsApi']['MCH_ID'];
+        $this->MakeSign = $config['JsApi']['MakeSign'];
+        $this->Secret = $config['wechatLogin']['appSecret'];
     }
     public function actionWxheandle($result){
         $open_id = $result['openid'];

@@ -2,7 +2,7 @@
 /**
 *微信授权登录 ThinkPHP5.1为例
 */
-namespace app\common;  //根据实际情况做修改
+namespace common; //根据实际情况做修改
 
 class WeChatLogin
 {
