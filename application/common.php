@@ -33,13 +33,13 @@ function apiReturn($status, $message = '', $data = null)
  * description 该接口中的日志文件需要手动创建，并修改对应的权限
  * @param $str
  */
-function output_log_file($str)
+function output_log_file($str,$file = 'randolph')
 {
     $date = date('Y-m-d');
     if (PHP_OS == 'Linux') {
         $path =  "/var/log";
 //        var_dump($path);
-        $filename = $path . '/' . "randolph.log";
+        $filename = $path . '/' . $file . '.log';
     } else {
         //windows下面 根据需要可以打开调试
 //            $path = DOCROOT . "logs\\$type\\$date";

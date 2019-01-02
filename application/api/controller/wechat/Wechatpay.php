@@ -6,6 +6,7 @@ namespace app\api\controller\wechat;
 use common\JsApi;
 use think\Request;
 class WechatPay extends Controller{
+//    公众号h5支付
 	/**
      * @title 订单支付
      * @description 接口说明
